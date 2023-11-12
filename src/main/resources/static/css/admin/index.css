@@ -1,0 +1,187 @@
+@import url(/css/common/reset.css);
+
+
+/* fragments 안했어요 그냥 통  css 파일입니다 */
+
+/*catfather49@gmail.com*/
+
+  /* header */
+
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  html,body{
+    width: 100%;
+    min-height:100%;
+  }
+  ul,li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  button{
+    border: 0;
+    background-color: transparent;
+  }
+
+  .header{
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    background-color: #cdd4ef;
+
+  }
+
+  .header .top-nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  .header .top-nav .logo{
+    width: 40%;
+  }
+
+  .header .top-nav ul{
+    display: flex;
+    width: 40%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .header .top-nav ul li{
+    padding : 5px;
+    width: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #8C9CDB;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px 0px #8C9CDB, inset 0px -2px 4px -1px #8c9cdb98;
+
+
+  }
+
+  /* sideBar ========================================================== */
+
+  :root {
+    --side-bar-width: 200px;
+    --side-bar-height: 50vh;
+  }
+
+
+  .sideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 20px;
+    transform: translate(calc(var(--side-bar-width) * -0.8), 0);  /* X축 이동, Y축 고정 */
+    transition: .5s;
+    position: fixed;    /* 스크롤을 따라오도록 지정 */
+    width: var(--side-bar-width); /*변수를 통해 사이드바 넒이 조정*/
+    min-height: var(--side-bar-height);   /*사이드바 높이 조정*/
+
+
+  }
+
+  .sideBar > .sideBar-sec > ul > li {
+    position: relative;
+  }
+
+  .sideBar > .sideBar-sec > ul > li:after {
+          content: "";
+          display: block;
+          width: 60px;
+          border-bottom: 1px solid #bcbcbc;
+          margin: 20px auto;
+        }
+
+  .sideBar > .sideBar-sec > ul{
+    padding: 10px;
+  }
+
+  .sideBar > .sideBar-sec > ul > li > ul{
+    display: none;
+  }
+
+  .sideBar > .sideBar-sec > ul li{
+    margin-bottom: 25px;
+  }
+
+  .sideBar > .sideBar-sec > ul > li:hover > ul  {
+    display: block;
+    position: absolute;
+    background-color: rgb(125, 255, 255);
+    top: 0;         /* 2차 메뉴의 상단을 1차 메뉴의 상단에 고정 */
+    left: 100%;     /* 2차 메뉴를 1차 메뉴의 너비만큼 이동 */
+    width: 150%;    /* 1차 메뉴의 너비를 상속 */
+    text-align: center;
+  }
+
+  .sideBar > *{
+    position: relative;
+
+  }
+
+  .sideBar:hover {
+    transform: translate(15px, 0);   /* 둥근 모서리의 너비만큼 X축 이동, Y축 고정 */
+  }
+
+
+ /* main ============================================================================*/
+
+.main{
+  background-color: #F0F2F5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.container .main-section1{
+    width: auto;
+    margin: 0 auto;
+}
+.container .main-section1 ul{
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 400px 400px;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container .main-section1 ul li{
+    text-align: center;
+    line-height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    background-color: white;
+    border: 1px solid #8C9CDB;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px 0px #8C9CDB, inset 0px -2px 4px -1px #8c9cdb98;
+
+}
+
+  /* footer */
+
+  .footer{
+    background-color: #cdd4ef;
+  }
